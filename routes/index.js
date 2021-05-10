@@ -3,6 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, "storage");
@@ -16,6 +17,29 @@ const upload = multer({ storage: storage });
 
 router.get("/", function (req, res, next) {
     res.send("Hello world");
+});
+
+router.post("/echo", function (req, res, next) {
+    res.send(req.body);
+});
+
+router.get("/lotto", function (req, res, next) {
+    const lotto = require("../data/lotto.json");
+    res.send(lotto);
+});
+
+router.get("/bookstore", function (req, res, next) {
+    const bookstore = require("../data/bookstore.json");
+    res.send(bookstore);
+});
+
+router.get("/error", function (req, res, next) {
+    console.log(`req.query.test = ${req.query.test}`);
+    if (req.query.test !== undefined) {
+        res.sendStatus(200);
+    } else {
+        res.sendStatus(400);
+    }
 });
 
 router.get("/upload", async (req, res, next) => {
