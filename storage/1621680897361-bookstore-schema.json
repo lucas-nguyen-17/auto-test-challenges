@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "book store schema",
+  "type": "object",
+  "properties": {
+    "store": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "author": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "isbn": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "author",
+              "category",
+              "price",
+              "title"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

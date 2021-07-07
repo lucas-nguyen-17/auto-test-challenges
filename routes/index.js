@@ -53,7 +53,7 @@ router.get("/upload", async (req, res, next) => {
 });
 
 router.post("/upload", upload.single("file-key"), async (req, res, next) => {
-    res.send("Uploaded successfully");
+    res.send({ message: "Uploaded successfully" });
 });
 
 module.exports = router;
