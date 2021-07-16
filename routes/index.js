@@ -56,4 +56,19 @@ router.post("/upload", upload.single("file-key"), async (req, res, next) => {
     res.send({ message: "Uploaded successfully" });
 });
 
+router.get("/challeng2postman", function (req, res, next) {
+    const data = {
+        "data": {
+            "instruction01": "1",
+            "instruction02": "2",
+            "fake": "distraction",
+            "instruction03": "3",
+            "instruction04": "4",
+            "instruction05": "5",
+            "created": 123131231
+        }
+    };
+    res.send(data);
+});
+
 module.exports = router;
