@@ -56,7 +56,7 @@ router.post("/upload", upload.single("file-key"), async (req, res, next) => {
     res.send({ message: "Uploaded successfully" });
 });
 
-router.get("/challenge2postman", function (req, res, next) {
+router.post("/challenge2postman", function (req, res, next) {
     const data = {
         "data": {
             "instruction01": "1",
