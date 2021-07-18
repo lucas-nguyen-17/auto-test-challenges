@@ -71,4 +71,45 @@ router.post("/challenge2postman", function (req, res, next) {
     res.send(data);
 });
 
+router.get("/challenge3postman", function (req, res, next) {
+    let data;
+
+    if (req.query.id !== undefined) {
+        data = {
+            "id": req.query.id
+        };
+    } else {
+        data = [1, 2, 3, 4, 5];
+    }
+
+    res.send(data);
+});
+
+router.get("/challenge3restassured", function (req, res, next) {
+    let data = {
+        "data": {
+            "key1": {
+                "number": 10,
+                "data": {
+                    "number": 1 //ko tính
+                }
+            },
+            "key2": {
+                "number": 20,
+                "data": {
+                    "number": 1 //ko tính
+                }
+            },
+            "key 3": {
+                "number": 30,
+                "data": {
+                    "number": 1 //ko tính
+                }
+            }
+        }
+    };
+
+    res.send(data);
+});
+
 module.exports = router;
