@@ -68,6 +68,7 @@ router.post("/challenge2postman", function (req, res, next) {
             "created": 123131231
         }
     };
+    res.setHeader("Content-Type", "application/json");
     res.send(data);
 });
 
@@ -84,6 +85,7 @@ router.get("/challenge3postman", function (req, res, next) {
         }
     };
 
+    res.setHeader("Content-Type", "application/json");
     res.send(data);
 });
 
@@ -93,24 +95,25 @@ router.get("/challenge3restassured", function (req, res, next) {
             "key1": {
                 "number": 10,
                 "data": {
-                    "number": 1 //ko tính
+                    "number": 1
                 }
             },
             "key2": {
                 "number": 20,
                 "data": {
-                    "number": 1 //ko tính
+                    "number": 1
                 }
             },
             "key 3": {
                 "number": 30,
                 "data": {
-                    "number": 1 //ko tính
+                    "number": 1
                 }
             }
         }
     };
 
+    res.setHeader("Content-Type", "application/json");
     res.send(data);
 });
 
