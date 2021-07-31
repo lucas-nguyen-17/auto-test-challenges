@@ -112,7 +112,7 @@ router.get("/challenge3restassured", function (req, res, next) {
     res.send(data);
 });
 
-router.get("/x", function (req, res, next) {
+router.get("/challenge3postman", function (req, res, next) {
     let data = {
         "success": "true",
         "Result": {
