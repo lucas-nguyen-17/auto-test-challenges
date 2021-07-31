@@ -72,15 +72,17 @@ router.post("/challenge2postman", function (req, res, next) {
 });
 
 router.get("/challenge3postman", function (req, res, next) {
-    let data;
-
-    if (req.query.id !== undefined) {
-        data = {
-            "id": req.query.id
-        };
-    } else {
-        data = [1, 2, 3, 4, 5];
-    }
+    let data = {
+        "success": "true",
+        "Result": {
+            "Response": [
+                {
+                    "Material Id": "e838663839398f",
+                    "Material Department": "OT"
+                }
+            ]
+        }
+    };
 
     res.send(data);
 });
@@ -106,22 +108,6 @@ router.get("/challenge3restassured", function (req, res, next) {
                     "number": 1 //ko tính
                 }
             }
-        }
-    };
-
-    res.send(data);
-});
-
-router.get("/challenge3postman", function (req, res, next) {
-    let data = {
-        "success": "true",
-        "Result": {
-            "Response": [
-                {
-                    "Material Id": "e838663839398f",
-                    "Material Department": "OT"
-                }
-            ]
         }
     };
 
