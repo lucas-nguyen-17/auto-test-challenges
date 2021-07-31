@@ -69,7 +69,8 @@ router.post("/challenge2postman", function (req, res, next) {
         }
     };
 
-    res.json(data);
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify(data, null, 2));
 });
 
 router.get("/challenge3postman", function (req, res, next) {
@@ -85,7 +86,8 @@ router.get("/challenge3postman", function (req, res, next) {
         }
     };
 
-    res.json(data);
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify(data, null, 2));
 });
 
 router.get("/challenge3restassured", function (req, res, next) {
@@ -112,7 +114,8 @@ router.get("/challenge3restassured", function (req, res, next) {
         }
     };
 
-    res.json(data);
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify(data, null, 2));
 });
 
 module.exports = router;
