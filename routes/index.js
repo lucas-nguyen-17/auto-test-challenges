@@ -68,8 +68,8 @@ router.post("/challenge2postman", function (req, res, next) {
             "created": 123131231
         }
     };
-    res.setHeader("Content-Type", "application/json");
-    res.send(data);
+
+    res.json(data);
 });
 
 router.get("/challenge3postman", function (req, res, next) {
@@ -85,8 +85,7 @@ router.get("/challenge3postman", function (req, res, next) {
         }
     };
 
-    res.setHeader("Content-Type", "application/json");
-    res.send(data);
+    res.json(data);
 });
 
 router.get("/challenge3restassured", function (req, res, next) {
@@ -113,8 +112,7 @@ router.get("/challenge3restassured", function (req, res, next) {
         }
     };
 
-    res.setHeader("Content-Type", "application/json");
-    res.send(data);
+    res.json(data);
 });
 
 module.exports = router;
