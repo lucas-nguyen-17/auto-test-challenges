@@ -90,6 +90,12 @@ router.get("/challenge3postman", function (req, res, next) {
     res.end(JSON.stringify(data, null, 2));
 });
 
+router.get("/challenge4postman", function (req, res, next) {
+    res.send(
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    );
+});
+
 router.get("/challenge3restassured", function (req, res, next) {
     let data = {
         "data": {
