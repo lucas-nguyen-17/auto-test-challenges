@@ -124,4 +124,52 @@ router.get("/challenge3restassured", function (req, res, next) {
     res.end(JSON.stringify(data, null, 2));
 });
 
+router.get("/challenge4restassured", function (req, res, next) {
+    let data = [
+        {
+            "id": "0001",
+            "type": "donut",
+            "name": "Choco Blueberry Cake",
+            "ppu": 0.55,
+            "batter": [
+                {
+                    "id": "1001",
+                    "type": "Regular"
+                },
+                {
+                    "id": "1002",
+                    "type": "Chocolate"
+                },
+                {
+                    "id": "1003",
+                    "type": "Blueberry"
+                }
+            ]
+        },
+        {
+            "id": "0002",
+            "type": "donut",
+            "name": "Choco Blueberry Cake",
+            "ppu": 0.55,
+            "batter": [
+                {
+                    "id": "1001",
+                    "type": "Regular"
+                },
+                {
+                    "id": "1002",
+                    "type": "Chocolate 2"
+                },
+                {
+                    "id": "1003",
+                    "type": "Blueberry"
+                }
+            ]
+        }
+    ];
+
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify(data, null, 2));
+});
+
 module.exports = router;
